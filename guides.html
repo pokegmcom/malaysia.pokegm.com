@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Permainan Lengkap PokeHunt | Tips & Strategi untuk Pemula</title>
+    <meta name="description" content="Panduan permainan PokeHunt yang lengkap dengan tips untuk pemula, cadangan pemilihan kelas, strategi pertempuran, panduan menangkap monster dan teknik latihan. Pelajari segala-galanya untuk menjadi jurulatih monster terhebat!">
+    <meta name="keywords" content="PokeHunt, panduan permainan, pemula, pemilihan kelas">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .guide-card {
+            transition: all 0.3s ease;
+        }
+        .guide-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="PokeHunt" class="h-10 w-auto">
+                    <span class="ml-2 text-xl font-bold text-primary">PokeHunt</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition-colors">Utama</a>
+                    <a href="features.html" class="text-gray-700 hover:text-primary transition-colors">Ciri-ciri</a>
+                    <a href="guides.html" class="text-primary font-medium">Panduan</a>
+                    <a href="codes.html" class="text-gray-700 hover:text-primary transition-colors">Kod Tukar</a>
+                    <a href="articles.html" class="text-gray-700 hover:text-primary transition-colors">Artikel</a>
+                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="bg-accent text-dark px-4 py-2 rounded-lg font-medium hover:bg-yellow-400 transition-colors">
+                        <i class="fa fa-download mr-2"></i>Muat Turun
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-dark text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-primary transition-colors">Utama</a>
+                <a href="features.html" class="block text-gray-700 hover:text-primary transition-colors">Ciri-ciri</a>
+                <a href="guides.html" class="block text-primary font-medium">Panduan</a>
+                <a href="codes.html" class="block text-gray-700 hover:text-primary transition-colors">Kod Tukar</a>
+                <a href="articles.html" class="block text-gray-700 hover:text-primary transition-colors">Artikel</a>
+                <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="block bg-accent text-dark px-4 py-2 rounded-lg font-medium text-center">
+                    <i class="fa fa-download mr-2"></i>Muat Turun
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-center mb-4 text-primary">Panduan Permainan</h1>
+        <p class="text-center text-gray-600 mb-12">Pelajari semua yang anda perlu tahu untuk menjadi jurulatih monster terhebat!</p>
+        
+        <div class="space-y-8">
+            <div class="guide-card bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fa fa-rocket text-2xl text-primary"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-primary">Panduan Pemula</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Baru mula bermain? Berikut adalah tutorial terperinci untuk membantu anda bermain dengan cepat.</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>Cipta watak dan pilih monster permulaan</li>
+                    <li>Pelajari operasi asas dan antara muka</li>
+                    <li>Selesaikan tugas pemula untuk mendapat ganjaran</li>
+                    <li>Pelajari asas sistem pertempuran</li>
+                    <li>Terokai peta awal dan tangkap monster baru</li>
+                </ul>
+            </div>
+            
+            <div class="guide-card bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center">
+                        <i class="fa fa-users text-2xl text-secondary"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-primary">Cadangan Pemilihan Kelas</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Terdapat pelbagai kelas dalam permainan, setiap kelas mempunyai kemahiran dan permainan unik.</p>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-light p-5 rounded-xl">
+                        <h4 class="font-bold mb-2 text-lg">Pahlawan</h4>
+                        <p class="text-sm text-gray-600 mb-3">Pertahanan tinggi, sesuai untuk pemula</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>• HP tinggi dan pertahanan kuat</li>
+                            <li>• Mudah untuk bertahan dalam pertempuran</li>
+                            <li>• Sesuai untuk pemain baru</li>
+                        </ul>
+                    </div>
+                    <div class="bg-light p-5 rounded-xl">
+                        <h4 class="font-bold mb-2 text-lg">Ahli Sihir</h4>
+                        <p class="text-sm text-gray-600 mb-3">Output sihir tinggi, kerosakan berkumpulan</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>• Kerosakan sihir yang kuat</li>
+                            <li>• Serangan kawasan luas</li>
+                            <li>• Sesuai untuk pertempuran PvE</li>
+                        </ul>
+                    </div>
+                    <div class="bg-light p-5 rounded-xl">
+                        <h4 class="font-bold mb-2 text-lg">Pembunuh</h4>
+                        <p class="text-sm text-gray-600 mb-3">Letupan tinggi, sesuai untuk PVP</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>• Kerosakan kritikal tinggi</li>
+                            <li>• Kelajuan serangan pantas</li>
+                            <li>• Sesuai untuk pemain berpengalaman</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-card bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-accent/20 rounded-full flex items-center justify-center">
+                        <i class="fa fa-paw text-2xl text-accent"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-primary">Panduan Menangkap Monster</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Tips untuk menangkap monster dengan berkesan dan mengoptimumkan pasukan anda.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold mb-3">Tips Menangkap</h4>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>Kurangkan HP monster sasaran kepada merah</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>Gunakan status seperti tidur atau lumpuh</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>Gunakan bola tangkapan yang sesuai</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-check text-secondary mt-1"></i>
+                                <span>Bawa banyak bola tangkapan</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-3">Lokasi Monster Langka</h4>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-map-marker text-primary mt-1"></i>
+                                <span>Gua Gelap - Monster jenis gelap</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-map-marker text-primary mt-1"></i>
+                                <span>Hutan Tersembunyi - Monster jenis rumput</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa fa-map-marker text-primary mt-1"></i>
+                                <span>Gunung Bersalji - Monster jenis ais</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-card bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fa fa-trophy text-2xl text-primary"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-primary">Strategi Pertempuran</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Kuasai seni pertempuran untuk mengalahkan lawan yang kuat.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-light p-5 rounded-xl">
+                        <h4 class="font-bold mb-3">Pertempuran PvE</h4>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Fokus pada kelemahan elemen musuh</li>
+                            <li>• Bawa item penyembuh yang mencukupi</li>
+                            <li>• Latih monster dengan pelbagai jenis</li>
+                            <li>• Tingkatkan level sebelum bos</li>
+                        </ul>
+                    </div>
+                    <div class="bg-light p-5 rounded-xl">
+                        <h4 class="font-bold mb-3">Pertempuran PvP</h4>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>• Bina pasukan yang seimbang</li>
+                            <li>• Pelajari meta semasa</li>
+                            <li>• Gunakan strategi mengganggu</li>
+                            <li>• Latih kemahiran ramalan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-card bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center">
+                        <i class="fa fa-star text-2xl text-secondary"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-primary">Tips Latihan Monster</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Optimumkan pertumbuhan monster anda dengan tips berikut.</p>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="text-center p-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fa fa-heart text-primary"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Candy Ajaib</h4>
+                        <p class="text-sm text-gray-600">Gunakan candy untuk meningkatkan level dengan cepat</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fa fa-refresh text-secondary"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Evolusi</h4>
+                        <p class="text-sm text-gray-600">Evolusikan monster pada waktu yang tepat untuk statistik terbaik</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fa fa-diamond text-accent"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">IV & EV</h4>
+                        <p class="text-sm text-gray-600">Latih nilai individu untuk prestasi maksimum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-gray-600 mb-4">Mahu bermain sekarang?</p>
+            <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="inline-block bg-primary text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-purple-600 transition-colors">
+                <i class="fa fa-download mr-2"></i>Muat Turun Sekarang
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">PokeHunt</h3>
+                    <p class="text-gray-400">Permainan koleksi dan latihan monster dengan gaya piksel retro yang menarik.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Pautan Pantas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Utama</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-white">Ciri-ciri</a></li>
+                        <li><a href="guides.html" class="text-gray-400 hover:text-white">Panduan</a></li>
+                        <li><a href="codes.html" class="text-gray-400 hover:text-white">Kod Tukar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-discord mr-2"></i>
+                            <a href="https://discord.gg/Pvkxz96V" class="text-gray-400 hover:text-white">Discord</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Muat Turun</h3>
+                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="inline-block bg-accent text-dark px-4 py-2 rounded-lg font-medium">
+                        <i class="fa fa-download mr-2"></i>Muat Turun Segera
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 PokeHunt. Hak cipta terpelihara.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

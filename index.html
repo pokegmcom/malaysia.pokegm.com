@@ -9,370 +9,318 @@
     <meta name="author" content="Pokegm">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="PokeHunt - Laman Web Rasmi">
-    <meta property="og:description" content="PokeHunt - Permainan koleksi dan latihan monster tradisional dengan gaya piksel retro! RPG berdasarkan giliran yang menghormati permainan monster klasik, pemain akan menjadi jurulatih monster, menjelajahi kawasan yang tidak diketahui dalam dunia terbuka, menangkap ratusan monster unik, membina pasukan pertempuran eksklusif, dan bergandingan menarik dengan ketua gimnasium dan jurulatih legenda, semula kenangan semangat zaman kanak-kanak!">
+    <meta property="og:description" content="PokeHunt - Permainan koleksi dan latihan monster tradisional dengan gaya piksel retro!">
     <meta property="og:image" content="logo.png">
-    <meta property="og:url" content="https://www.pokegm.com">
+    <meta property="og:url" content="https://malaysia.pokegm.com">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+    </style>
 </head>
-<body>
-    <!-- Bar Navigasi -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-brand">
-                <img src="logo.png" alt="Logo PokeHunt" class="logo">
-                <h1>PokeHunt</h1>
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="#home">Laman Utama</a></li>
-                <li><a href="#about">Perihal Permainan</a></li>
-                <li><a href="#guide">Panduan Permainan</a></li>
-                <li><a href="#download">Muat Turun Segera</a></li>
-
-            </ul>
-            <div class="language-selector">
-                <button onclick="toggleLanguageDropdown()">
-                    <span>Malay</span>
-                    <span>▼</span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="https://game.pokegm.com">简体中文</a>
-                    <a href="https://taiwan.pokegm.com">繁體中文(台灣)</a>
-                    <a href="https://hongkong.pokegm.com">繁體中文(香港)</a>
-                    <a href="https://macau.pokegm.com">繁體中文(澳門)</a>
-                    <a href="https://korea.pokegm.com">한국어</a>
-                    <a href="https://singapore.pokegm.com">English</a>
-                    <a href="https://malaysia.pokegm.com">Malay</a>
-                    <a href="https://vietnam.pokegm.com">Tiếng Việt</a>
+<body class="bg-light">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="PokeHunt" class="h-10 w-auto">
+                    <span class="ml-2 text-xl font-bold text-primary">PokeHunt</span>
                 </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary font-medium">Utama</a>
+                    <a href="features.html" class="text-gray-700 hover:text-primary transition-colors">Ciri-ciri</a>
+                    <a href="guides.html" class="text-gray-700 hover:text-primary transition-colors">Panduan</a>
+                    <a href="codes.html" class="text-gray-700 hover:text-primary transition-colors">Kod Tukar</a>
+                    <a href="articles.html" class="text-gray-700 hover:text-primary transition-colors">Artikel</a>
+                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="bg-accent text-dark px-4 py-2 rounded-lg font-medium hover:bg-yellow-400 transition-colors">
+                        <i class="fa fa-download mr-2"></i>Muat Turun
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-dark text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
             </div>
-            <button class="navbar-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-primary font-medium">Utama</a>
+                <a href="features.html" class="block text-gray-700 hover:text-primary transition-colors">Ciri-ciri</a>
+                <a href="guides.html" class="block text-gray-700 hover:text-primary transition-colors">Panduan</a>
+                <a href="codes.html" class="block text-gray-700 hover:text-primary transition-colors">Kod Tukar</a>
+                <a href="articles.html" class="block text-gray-700 hover:text-primary transition-colors">Artikel</a>
+                <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="block bg-accent text-dark px-4 py-2 rounded-lg font-medium text-center">
+                    <i class="fa fa-download mr-2"></i>Muat Turun
+                </a>
+            </div>
         </div>
     </nav>
 
-    <!-- Banner Utama (Seksyen Utama) -->
-    <section id="home" class="hero">
-        <div class="slideshow-container">
-            <div class="slide fade">
-                <div class="slide-content">
-                    <h2>PokeHunt - Permainan Koleksi dan Latihan Monster Piksel Retro!</h2>
-                    <p>RPG berdasarkan giliran yang menghormati permainan monster klasik, dengan keindahan gaya piksel retro yang membawa kembali kenangan!</p>
-                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn btn-primary">Muat Turun Segera</a>
+    <main>
+        <section class="hero-gradient text-white py-20 md:py-32">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">PokeHunt - Permainan Monster Piksel Retro!</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Kumpul ratusan monster unik, bina pasukan eksklusif, dan jelajahi dunia terbuka!</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="bg-accent text-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105">
+                        <i class="fa fa-download mr-2"></i>Muat Turun Segera
+                    </a>
+                    <a href="features.html" class="bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all">
+                        <i class="fa fa-info-circle mr-2"></i>Lihat Ciri-ciri
+                    </a>
                 </div>
             </div>
-            <div class="slide fade">
-                <div class="slide-content">
-                    <h2>Jelajahi Dunia Terbuka dan Kumpul Monster!</h2>
-                    <p>Jelajahi kawasan yang tidak diketahui dalam dunia terbuka yang luas, dan tangkap ratusan monster unik!</p>
-                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn btn-primary">Muat Turun Segera</a>
-                </div>
-            </div>
-            <div class="slide fade">
-                <div class="slide-content">
-                    <h2>Bertarung dengan Ketua Gimnasium dan Jurulatih Legenda!</h2>
-                    <p>Bina pasukan pertempuran eksklusif dan bertarung menarik dengan ketua gimnasium dan jurulatih legenda!</p>
-                    <a href="#guide" class="btn btn-primary">Lihat Panduan</a>
-                </div>
-            </div>
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seksyen Muat Turun -->
-    <section id="download" class="download">
-        <div class="container">
-            <h2 class="section-title">Muat Turun Segera</h2>
-            <div class="download-content">
-                <div class="download-info">
-                    <p>PokeHunt kini tersedia! Muat turun sekarang dan masuk ke dunia permainan koleksi dan latihan monster piksel retro!</p>
-                    <p>Platform yang disokong: Android, iOS, PC, HarmonyOS</p>
-
-                </div>
-                <div class="download-buttons">
-                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="btn btn-primary btn-large">Muat Turun Versi Mudah Alih Segera</a>
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">Ciri-ciri Permainan</h2>
+                <p class="text-center text-gray-600 mb-12">Kenali semua ciri-ciri menarik dalam PokeHunt</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="feature-card bg-gradient-to-br from-primary/10 to-purple-100 rounded-2xl p-8 transition-all duration-300">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-paw text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Ratusan Monster</h3>
+                        <p class="text-gray-600">Tangkap dan kumpulkan ratusan monster unik dengan pelbagai jenis dan keupayaan istimewa.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-gradient-to-br from-secondary/10 to-green-100 rounded-2xl p-8 transition-all duration-300">
+                        <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-globe text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Dunia Terbuka</h3>
+                        <p class="text-gray-600">Jelajahi kawasan yang tidak diketahui dalam dunia terbuka yang luas dan cari monster tersembunyi.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-gradient-to-br from-accent/10 to-yellow-100 rounded-2xl p-8 transition-all duration-300">
+                        <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-gamepad text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Pertempuran Strategi</h3>
+                        <p class="text-gray-600">Bina pasukan secara strategik dan lakukan pertarungan menarik dengan ketua gimnasium.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-gradient-to-br from-pink-500/10 to-pink-100 rounded-2xl p-8 transition-all duration-300">
+                        <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-star text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Evolusi Monster</h3>
+                        <p class="text-gray-600">Latih monster anda dan lihat mereka berkembang menjadi bentuk yang lebih kuat dan hebat.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-gradient-to-br from-blue-500/10 to-blue-100 rounded-2xl p-8 transition-all duration-300">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-trophy text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Pertandingan</h3>
+                        <p class="text-gray-600">Bertanding dengan jurulatih lain dan buktikan diri anda sebagai jurulatih terhebat.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-gradient-to-br from-orange-500/10 to-orange-100 rounded-2xl p-8 transition-all duration-300">
+                        <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-users text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Komuniti</h3>
+                        <p class="text-gray-600">Sertai komuniti jurulatih dan kongsi pengalaman, strategi, dan monster anda.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seksyen Perihal Permainan -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">Perihal Permainan</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>PokeHunt ialah permainan koleksi dan latihan monster tradisional yang menggunakan gaya piksel retro. Ia adalah RPG berdasarkan giliran yang menghormati permainan monster klasik, memulihkan keindahan permainan monster tradisional sambil menambah elemen penerokaan dunia terbuka baru.</p>
-                    <p>Secara individu, anda akan menjelajahi kawasan yang tidak diketahui dalam dunia terbuka sebagai jurulatih monster, menangkap ratusan monster unik, dan membina pasukan pertempuran eksklusif. Lakukan pertarungan menarik dengan ketua gimnasium dan jurulatih legenda, dan mainkan semula ingatan bersemangat zaman kanak-kanak!</p>
+        <section class="py-16 bg-light">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">Kod Hadiah Terkini</h2>
+                <p class="text-center text-gray-600 mb-12">Gunakan kod ini untuk mendapatkan ganjaran eksklusif!</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <div class="bg-white rounded-xl p-6 shadow-lg border-2 border-primary">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-primary text-white text-xs px-3 py-1 rounded-full">Baru</span>
+                            <span class="text-gray-400 text-sm">20 Mac 2026</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Hadia Pelancaran</h3>
+                        <p class="text-gray-600 text-sm mb-3">Candy Ajaib (Sederhana)*50, Kad Rawak Biasa*20</p>
+                        <div class="flex items-center justify-between">
+                            <code class="bg-primary/10 text-primary px-3 py-2 rounded font-mono text-sm">vip666</code>
+                            <button onclick="copyCode('vip666')" class="text-primary hover:text-purple-600">
+                                <i class="fa fa-copy text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-secondary text-white text-xs px-3 py-1 rounded-full">Terhad</span>
+                            <span class="text-gray-400 text-sm">15 Mac 2026</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Hadiah Musim Bunga</h3>
+                        <p class="text-gray-600 text-sm mb-3">Kristal*200, Kad Istimewa Musim Bunga*1</p>
+                        <div class="flex items-center justify-between">
+                            <code class="bg-primary/10 text-primary px-3 py-2 rounded font-mono text-sm">spring2026</code>
+                            <button onclick="copyCode('spring2026')" class="text-primary hover:text-purple-600">
+                                <i class="fa fa-copy text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-accent text-dark text-xs px-3 py-1 rounded-full">Istimewa</span>
+                            <span class="text-gray-400 text-sm">10 Mac 2026</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Hadiah Mewah</h3>
+                        <p class="text-gray-600 text-sm mb-3">Kad Langka*10, Emas*100000, Batu Sifat*20</p>
+                        <div class="flex items-center justify-between">
+                            <code class="bg-primary/10 text-primary px-3 py-2 rounded font-mono text-sm">luxury2026</code>
+                            <button onclick="copyCode('luxury2026')" class="text-primary hover:text-purple-600">
+                                <i class="fa fa-copy text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-features">
-                    <div class="feature">
-                        <h3>Gaya Piksel Retro</h3>
-                        <p>Dengan grafik gaya retro yang membangkitkan ingatan zaman kanak-kanak, kita memulihkan keindahan permainan monster tradisional</p>
+                
+                <div class="text-center mt-8">
+                    <a href="codes.html" class="text-primary font-medium hover:underline">Lihat semua kod hadiah →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">Mengapa Pilih PokeHunt?</h2>
+                <p class="text-center text-gray-600 mb-12">Alasan utama mengapa PokeHunt adalah permainan yang tepat untuk anda</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa fa-heart text-2xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-dark">Nostalgia Klasik</h3>
+                            <p class="text-gray-600">Gaya piksel retro yang membawa kembali kenangan permainan monster klasik zaman kanak-kanak.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Ratusan Jenis Monster</h3>
-                        <p>Tangkap dan kumpulkan monster unik dengan pelbagai jenis, dan bina pasukan pertempuran eksklusif</p>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa fa-mobile text-2xl text-secondary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-dark">Dimainkan Di Mana Saja</h3>
+                            <p class="text-gray-600">Boleh dimainkan di Android, iOS, PC dan HarmonyOS. Main di mana sahaja, bila-bila masa.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Pertempuran Strategi Berdasarkan Giliran</h3>
-                        <p>Bina pasukan secara strategik dan lakukan pertarungan menarik dengan ketua gimnasium dan jurulatih legenda</p>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa fa-bolt text-2xl text-accent"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-dark">Kemas Kini Berkala</h3>
+                            <p class="text-gray-600">Monster baru, ciri-ciri baru dan acara menarik sentiasa ditambah untuk pengalaman yang lebih baik.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Penerokaan Dunia Terbuka</h3>
-                        <p>Jelajahi kawasan yang tidak diketahui dalam dunia terbuka yang luas, dan cari monster tersembunyi</p>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-pink-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa fa-shield text-2xl text-pink-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-dark">Permainan Adil</h3>
+                            <p class="text-gray-600">Sistem permainan yang seimbang dan adil, memberi peluang yang sama untuk semua pemain.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Slideshow Gambar Ciri Permainan -->
-            <div class="about-slider">
-                <div class="slider-container">
-                    <div class="slider-slide fade">
-                        <img src="1.jpg" alt="Gambar Ciri Permainan 1" class="slider-image">
-                    </div>
-                    <div class="slider-slide fade">
-                        <img src="2.jpg" alt="Gambar Ciri Permainan 2" class="slider-image">
-                    </div>
-                    <div class="slider-slide fade">
-                        <img src="3.jpg" alt="Gambar Ciri Permainan 3" class="slider-image">
-                    </div>
-                    <div class="slider-slide fade">
-                        <img src="4.jpg" alt="Gambar Ciri Permainan 4" class="slider-image">
-                    </div>
-                    <div class="slider-slide fade">
-                        <img src="5.jpg" alt="Gambar Ciri Permainan 5" class="slider-image">
-                    </div>
-                </div>
-                <!-- Butang Kawalan -->
-                <a class="slider-prev" onclick="plusFeatureSlides(-1)">&lt;</a>
-                <a class="slider-next" onclick="plusFeatureSlides(1)">&gt;</a>
-                <!-- Penunjuk -->
-                <div class="slider-dots">
-                    <span class="slider-dot" onclick="currentFeatureSlide(1)"></span>
-                    <span class="slider-dot" onclick="currentFeatureSlide(2)"></span>
-                    <span class="slider-dot" onclick="currentFeatureSlide(3)"></span>
-                    <span class="slider-dot" onclick="currentFeatureSlide(4)"></span>
-                    <span class="slider-dot" onclick="currentFeatureSlide(5)"></span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 文章公告部分 -->
-    <section id="article" class="article">
-        <div class="container">
-            <div class="article-content">
-                <h2 class="section-title">Pengumuman Pelancaran Permainan</h2>
-                <div class="article-text">
-                    <p>Kepada semua Jurulatih Yang Dihormati:</p>
-                    <p>《PokeHunt》akan dilancarkan secara rasmi pada 20 Januari 2026 jam 10:00 pagi! Permainan klasik Pokémon ini meniru dengan teliti penampilan asli ratusan Pokémon dan teras pengembaraan! Dalam permainan, anda boleh mengalami:</p>
-                    <ul>
-                        <li>【Konten Asli】100% meniru penampilan Pokémon klasik, berkumpul dengan rakan dari pelbagai pihak!</li>
-                        <li>【Bentuk Pokémon】Evolusi MEGA, Penggantian Saiz, membuka semua bentuk Pokémon!</li>
-                        <li>【Bonus Harta Karun】Aksesori ikatan, mengaktifkan kuasa tersembunyi Pokémon!</li>
-                        <li>【Pengembaraan Eksplorasi】Tahap peta terbuka, menemui kawasan rahsia yang tersembunyi!</li>
-                        <li>【Duel Permainan】Duel individu untuk menguji kekuatan, bersaing untuk kedudukan puncak!</li>
+        <section class="py-16 hero-gradient text-white">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Bersedia Untuk Memulakan Pengembaraan?</h2>
+                <p class="text-xl mb-8 opacity-90">Muat turun PokeHunt sekarang dan mulakan perjalanan anda sebagai jurulatih monster!</p>
+                <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="inline-block bg-accent text-dark px-12 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105">
+                    <i class="fa fa-download mr-2"></i>Muat Turun Segera
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">PokeHunt</h3>
+                    <p class="text-gray-400">Permainan koleksi dan latihan monster dengan gaya piksel retro yang menarik.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Pautan Pantas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Utama</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-white">Ciri-ciri</a></li>
+                        <li><a href="guides.html" class="text-gray-400 hover:text-white">Panduan</a></li>
+                        <li><a href="codes.html" class="text-gray-400 hover:text-white">Kod Tukar</a></li>
                     </ul>
-                    <p class="gift-title">Kod Hadiah: 【Faedah Lancaran Server】</p>
-                    <div class="gift-codes">
-                        <div class="gift-item">
-                            <div class="gift-number">Kod Hadiah 1</div>
-                            <div class="gift-code">ay6btcrx</div>
-                            <div class="gift-reward">Kristal*50, Emas*10,000</div>
-                        </div>
-                        <div class="gift-item">
-                            <div class="gift-number">Kod Hadiah 2</div>
-                            <div class="gift-code">d7lsw8bu</div>
-                            <div class="gift-reward">Gula Perihal Ajaib (Sederhana)*5, Emas*10,000</div>
-                        </div>
-                        <div class="gift-item">
-                            <div class="gift-number">Kod Hadiah 3</div>
-                            <div class="gift-code">1frydl8n</div>
-                            <div class="gift-reward">Tenaga*50, Kelelahan*100</div>
-                        </div>
-                        <div class="gift-item">
-                            <div class="gift-number">Kod Hadiah 4</div>
-                            <div class="gift-code">42binn3h</div>
-                            <div class="gift-reward">Pakej Kad Rawak Biasa*10, Gula Perihal Ajaib (Sederhana)*5</div>
-                        </div>
-                        <div class="gift-item">
-                            <div class="gift-number">Kod Hadiah 5</div>
-                            <div class="gift-code">y67gaamk</div>
-                            <div class="gift-reward">Kristal*100, Emas*10,000</div>
-                        </div>
-                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-discord mr-2"></i>
+                            <a href="https://discord.gg/Pvkxz96V" class="text-gray-400 hover:text-white">Discord</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Muat Turun</h3>
+                    <a href="https://hk.qu06.cn/pokehunt/?xamro7z8" class="inline-block bg-accent text-dark px-4 py-2 rounded-lg font-medium">
+                        <i class="fa fa-download mr-2"></i>Muat Turun Segera
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Seksyen Panduan Permainan -->
-    <section id="guide" class="guide">
-        <div class="container">
-            <h2 class="section-title">Panduan Permainan</h2>
-            <div class="guide-content">
-                <div class="guide-item">
-                    <h3>Panduan Pemula</h3>
-                    <div class="guide-steps">
-                        <div class="step">
-                            <h4>1. Muat Turun Segera</h4>
-                            <p>Selesaikan tempahan permainan. Anda boleh memuat turun dengan serta-merta apabila permainan dilancarkan pada Februari 2026.</p>
-                        </div>
-                        <div class="step">
-                            <h4>2. Cari Monster Pertama</h4>
-                            <p>Mulakan penerokaan dalam dunia terbuka dan cari monster di pelbagai kawasan. Sentuh monster yang muncul di skrin untuk menangkapnya.</p>
-                        </div>
-                        <div class="step">
-                            <h4>3. Latih Monster</h4>
-                            <p>Beri makanan kepada monster yang ditangkap dan kumpul pengalaman untuk mengekalkannya. Berkembang menjadi monster yang kuat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="guide-item">
-                    <h3>Strategi Lanjutan</h3>
-                    <div class="guide-tips">
-                    <div class="tip">
-                        <h4>Gunakan Keseimbangan Jenis</h4>
-                        <p>Setiap monster mempunyai kekuatan dan kelemahan terhadap jenis lain. Gunakan keseimbangan dengan betul dalam pertempuran berpangkalan giliran untuk memenangi perlawanan.</p>
-                    </div>
-                    <div class="tip">
-                        <h4>Gabungkan Kemahiran</h4>
-                        <p>Gabungkan kemahiran monster dengan betul untuk menimbulkan lebih banyak kerosakan. Ambil perhatian pada masa rehat kemahiran khas.</p>
-                    </div>
-                    <div class="tip">
-                        <h4>Susun Pasukan</h4>
-                        <p>Bina pasukan eksklusif dengan pelbagai jenis monster. Siapkan pasukan yang sesuai untuk pertempuran dengan ketua gimnasium dan jurulatih legenda.</p>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="friend-links">
-                    <span>Pautan Rakan: </span>
-                    <a href="https://game.pokegm.com">像素精灵</a>
-                    <a href="https://taiwan.pokegm.com">像素精靈</a>
-                    <a href="https://hongkong.pokegm.com">像素精靈</a>
-                    <a href="https://macau.pokegm.com">像素精灵</a>
-                    <a href="https://korea.pokegm.com">포케헌트</a>
-                    <a href="https://singapore.pokegm.com">PokeHunt</a>
-                    <a href="https://malaysia.pokegm.com">PokeHunt</a>
-                    <a href="https://vietnam.pokegm.com">Tinh linh pixsel</a>
-                </div>
-                <div class="footer-contact">
-                    <p>Sila hubungi kami melalui e-mel jika anda mempunyai sebarang soalan atau cadangan: <a href="mailto:game@pokegm.com" style="color: rgba(255,255,255,0.9); text-decoration: underline;">game@pokegm.com</a></p>
-                </div>
-                <p>&copy; 2026 Pokehunt. All rights reserved.</p>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 PokeHunt. Hak cipta terpelihara.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Slideshow Utama Atas
-        let slideIndex = 1;
-        showHeroSlides(slideIndex);
-
-        function plusSlides(n) {
-            showHeroSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showHeroSlides(slideIndex = n);
-        }
-
-        // Kawalan Slideshow Utama Atas
-        function showHeroSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-        }
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
         
-        // Kawalan Slideshow Ciri Permainan
-        let featureSlideIndex = 1;
-        showFeatureSlides(featureSlideIndex);
-        
-        function plusFeatureSlides(n) {
-            showFeatureSlides(featureSlideIndex += n);
-        }
-        
-        function currentFeatureSlide(n) {
-            showFeatureSlides(featureSlideIndex = n);
-        }
-        
-        function showFeatureSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slider-slide");
-            let dots = document.getElementsByClassName("slider-dot");
-            if (n > slides.length) {featureSlideIndex = 1}
-            if (n < 1) {featureSlideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[featureSlideIndex-1].style.display = "block";
-            dots[featureSlideIndex-1].className += " active";
-        }
-
-        // Slideshow Automatik
-        // Peralihan Automatik Slideshow Utama Atas
-        setInterval(() => {
-            plusSlides(1);
-        }, 5000);
-        
-        // Peralihan Automatik Slideshow Ciri Permainan
-        setInterval(() => {
-            plusFeatureSlides(1);
-        }, 4000);
-
-        // Menu Telefon Bimbit Mobile
-        const navbarToggle = document.querySelector('.navbar-toggle');
-        const navbarMenu = document.querySelector('.navbar-menu');
-
-        navbarToggle.addEventListener('click', () => {
-            navbarMenu.classList.toggle('active');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        // Fungsi dropdown pemilih bahasa
-        function toggleLanguageDropdown() {
-            document.querySelector('.language-selector').classList.toggle('active');
+        function copyCode(code) {
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Kod ' + code + ' telah disalin!');
+            }).catch(err => {
+                console.error('Gagal menyalin kod:', err);
+            });
         }
-
-        // Tutup menu dropdown apabila menekan luar
-        window.addEventListener('click', function(event) {
-            if (!event.target.closest('.language-selector')) {
-                document.querySelector('.language-selector').classList.remove('active');
-            }
-        });
     </script>
 </body>
 </html>
